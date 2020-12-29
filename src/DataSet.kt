@@ -27,13 +27,7 @@ data class DataSet(val trainingData: List<DataPoint>) {
         for (attribute in trainingData[1].map.values) {
             val index = trainingData[1].map.values.indexOf(attribute)
             when {
-                attribute.toString().toIntOrNull() is Int -> {
-                    val values = ArrayList<Pair<Double,Any>>()
-                    for (instance in trainingData)
-                        values.add(Pair(instance.map.values.elementAt(index)!!.toString().toDouble(), instance.label!!))
-                    continuousSets.add(Pair(trainingData[1].map.keys.elementAt(index), values))
-                }
-                attribute.toString().toDoubleOrNull() is Double -> {
+                attribute.toString().toIntOrNull() is Int || attribute.toString().toDoubleOrNull() is Double-> {
                     val values = ArrayList<Pair<Double,Any>>()
                     for (instance in trainingData)
                         values.add(Pair(instance.map.values.elementAt(index)!!.toString().toDouble(), instance.label!!))
