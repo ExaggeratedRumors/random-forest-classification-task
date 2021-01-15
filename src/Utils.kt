@@ -1,9 +1,10 @@
+import java.nio.file.Paths
 import kotlin.math.ln
 
 class Utils {
     companion object{
-        const val trainingPath = "C:/Users/gajda/Desktop/Projects-and-practise/DecisionTree_DataPoints/src/data/iris.csv"
-        const val testPath = "C:/Users/gajda/Desktop/Projects-and-practise/DecisionTree_DataPoints/src/data/iristest.csv"
+        val trainingPath = Paths.get("").toAbsolutePath().toString()+"/src/data/iris.csv"
+        val testPath = Paths.get("").toAbsolutePath().toString()+"/src/data/iristest.csv"
         const val hasID = true
 
         private fun log2(value: Double, numberOfSamples: Double) = if (value == 0.0) 1.0

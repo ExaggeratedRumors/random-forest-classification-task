@@ -6,7 +6,6 @@ class DecisionNode (private val key: String, private val children: Map<String, N
 
     override fun classify(dataPoint: DataPoint): String {
         val value = dataPoint.map[key]
-        println(value)
         val subtree = children?.get(value)!!
         return subtree.classify(dataPoint)
     }
