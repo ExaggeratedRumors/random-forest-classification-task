@@ -2,7 +2,7 @@ package decisionTree
 
 import DataPoint
 
-class DecisionNode (private val key: String, private val children: Map<String, Node>?) : Node() {
+class DecisionNode (private val key: String, private val children: Map<String, Node>?, depth: Int) : Node() {
 
     override fun classify(dataPoint: DataPoint): String {
         val value = dataPoint.map[key]
