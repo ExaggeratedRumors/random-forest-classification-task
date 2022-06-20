@@ -1,4 +1,5 @@
-# ClassificationRandomForest
+# Random Forest in classification task
 
-Low version of random forest in classification task.
-Code includes data modifying and information gain calculating.
+Project of a random forest algorithm in a machine learning classification task using information gain computation using entropy.
+
+
